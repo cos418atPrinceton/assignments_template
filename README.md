@@ -2,7 +2,22 @@
 
 ### Environment Setup
 
-Please follow <a href="setup.md">these instructions</a> for setting up for Go environment for assignments, as well as pointers to some necessary/useful tools.
+Teaching support is only provided for work done using the cycles or courselab servers. The tests are known to work under Go 1.9. Thus later version 1 releases should also work. Learn more about semantic versioning [here](https://semver.org/). Please follow <a href="setup.md">these instructions</a> for requesting access to the servers if you have not already done so.
+
+### Tools
+<p>
+ There are many commonly used tools in the Go ecosystem. The three most useful starting out are:
+ <a href="https://golang.org/cmd/gofmt/">Go fmt</a> and <a href="https://golang.org/cmd/vet/">Go vet</a>, which are built-ins, and <a href="https://github.com/golang/lint">Golint</a>, which is similar to the <tt>splint</tt> tool you used in COS217.
+</p>
+
+### Editors
+<p>
+ For those of you in touch with your systems side (this <em>is</em> Distributed Systems, after all), there are quite a few resources for Go development in both <a href="https://github.com/dominikh/go-mode.el">emacs</a> (additional information available <a href="http://dominik.honnef.co/posts/2013/03/emacs-go-1/">here</a>) and <a href="https://github.com/fatih/vim-go">vim</a> (additional resources <a href="http://farazdagi.com/blog/2015/vim-as-golang-ide/">here</a>).
+</p>
+
+<p>
+ As many Princeton COS students have become attached to Sublime, here are the two indispensible Sublime packages for Go development: <a href="https://github.com/DisposaBoy/GoSublime">GoSublime</a> and <a href="https://github.com/golang/sublime-build">Sublime-Build</a>. And -- learning from the ancient emacs-vi holy war -- it would be inviting trouble to offer Sublime information without likewise dispensing the must-have Atom plugin: <a href="https://atom.io/packages/go-plus">Go-Plus</a> (walkthrough and additional info <a href="https://rominirani.com/setup-go-development-environment-with-atom-editor-a87a12366fcf#.v49dtbadi">here</a>).
+</p>
 
 ### Coding Style
 

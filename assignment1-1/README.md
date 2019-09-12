@@ -8,9 +8,6 @@
   recommend going through the <a href="http://tour.golang.org/list">Golang tour</a>
   before you begin this assignment.
 </p>
-<p>
-  You may choose to <a href="https://golang.org/doc/install">install Go</a> on your machine and work locally, but all submitted work must pass the tests when run on Princeton's courselab servers.
-</p>
 <h2>Software</h2>
 <p>
   You will find the code in the same directory as this readme. The two problems that you need to solve are in <tt>q1.go</tt>

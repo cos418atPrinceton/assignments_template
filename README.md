@@ -34,8 +34,7 @@ produce code that complies with <a
 href="https://github.com/golang/lint">Golint</a> where possible. </p>
 
 <h3>How do I git?</h3>
-This page has some useful tutorials on git: <a href="https://www.atlassian.com/git/tutorial">Git Tutorials</a></br>
-In particular, tutorials 1 and 5 will be most useful for this course.</p>
+<p>Please read this <a href="https://git-scm.com/docs/gittutorial">Git Tutorial</a>.</p>
 
 <p>The basic git workflow in the shell (assuming you already have a repo set up):</br>
 <ul>
@@ -48,13 +47,10 @@ In particular, tutorials 1 and 5 will be most useful for this course.</p>
 </ul>
 </p>
 
-<p>Finally, <a href="https://confluence.atlassian.com/display/BITBUCKET/Bitbucket+101">Bitbucket 101</a> is another good resource.</p>
-
-
-<p> All programming assignments, require Git for submission. <p> We are using Github for distributing and collecting your assignments. At the time of seeing this, you should have already joined the [COS418F18](https://github.com/orgs/COS418F18) organization on Github and forked your private repository. You will need to develop in a *nix environment, i.e., Linux or OS X. Your Github page should have a link. Normally, you only need to clone the repository once, and you will have everything you need for all the assignments in this class.
+<p> All programming assignments, require Git for submission. <p> We are using Github for distributing and collecting your assignments. At the time of seeing this, you should have already joined the <a href="https://github.com/orgs/COS418F19">COS418F19</a> organization on Github and forked your private repository. Your Github page should have a link. Normally, you only need to clone the repository once, and you will have everything you need for all the assignments in this class.
 
 ```bash
-$ git clone https://github.com/COS418F18/assignments-myusername.git 418
+$ git clone https://github.com/COS418F19/assignments-myusername.git 418
 $ cd 418
 $ ls
 assignment1-1  assignment1-2  assignment1-3  assignment2  assignment3  assignment4  assignment5  README.md  setup.md
@@ -85,6 +81,6 @@ $
 
 As you complete parts of the assignments (and begin future assignments) we'll ask you push tags. You should also be committing and pushing your progress regularly.
 
-### Steping into Assignment 1-1
+### Stepping into Assignment 1-1
 
-Now it's time to go to assignment 1-1 folder to begin your adventure!
+Now it's time to go to the [assignment 1-1](assignment1-1) folder to begin your adventure!

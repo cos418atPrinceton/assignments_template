@@ -55,7 +55,7 @@
 
 
 ### Submitting Assignment
-<p> Now you need to submit your assignment. Commit your change and push it to the remote repository by doing the following: 
+<p> Now you need to submit your assignment. Commit your change and push it to the remote repository by doing the following: </p>
 
 ```bash
 $ git commit -am "[you fill me in]"
@@ -64,3 +64,13 @@ $ git push origin master
 $ git push origin a11-handin
 ```
 
+<p>Enter the follwoing commands in order to delete and repush a tag.</p>
+
+```bash
+$ git push --delete origin a11-handin
+$ git tag --delete a11-handin
+$ git tag -am "i finished assignment 1-1" a11-handin
+$ git push --tags
+```
+
+<p>Alternatively, consult the man page on how to use the force flag.</p>

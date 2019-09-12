@@ -29,8 +29,7 @@ your name, userid, and a description of the file.</p>
 <p>It is recommended to use the standard tools <tt>gofmt</tt> and <tt>go
 vet</tt>. You can also use the <a
 href="https://github.com/qiniu/checkstyle">Go Checkstyle</a> tool for
-advice to improve your code's style, if applicable.  Additionally,
-though not part of the graded cheks, it would also be advisable to
+advice on how to improve your code's style. It would also be advisable to
 produce code that complies with <a
 href="https://github.com/golang/lint">Golint</a> where possible. </p>
 

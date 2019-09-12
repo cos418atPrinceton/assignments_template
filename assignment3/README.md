@@ -41,7 +41,7 @@
 
 <p>
   You should consult the
-  <a href="papers/raft.pdf">extended Raft paper</a>
+  <a href="https://raft.github.io/raft.pdf">extended Raft paper</a>
   and the Raft lecture notes. You may also find this
   <a href="http://thesecretlivesofdata.com/raft/">illustrated Raft guide</a>
   useful to get a sense of the high-level workings of Raft. For a
@@ -133,7 +133,7 @@ rf := Make(peers, me, persister, applyCh)
 // start agreement on a new log entry:
 rf.Start(command interface{}) (index, term, isleader)
 
-// ask a Raft for its current term, and whether it thinks it is leader
+// ask a Raft peer for its current term, and whether it thinks it is leader
 rf.GetState() (term, isLeader)
 
 // each time a new entry is committed to the log, each Raft peer
@@ -194,7 +194,7 @@ PASS
 
   <li>
     Read and understand the
-    <a href="papers/raft.pdf">extended Raft paper</a>
+    <a href="https://raft.github.io/raft.pdf">extended Raft paper</a>
     and the Raft lecture notes before you start. Your
     implementation should follow the paper's description
     closely, since that's what the tests expect. Figure 2 may

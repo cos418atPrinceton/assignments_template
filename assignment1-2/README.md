@@ -157,8 +157,10 @@ ok  mapreduce 4.515s
 
 <p>
   If the output did not show <em>ok</em> next to the tests, your
-  implementation has a bug in it. Note that we set<tt>debugEnabled = true</tt> in <tt>mapreduce/common.go</tt> so that you will get much more
-  output. When run with <tt>-v</tt> you will see output along the lines of:
+  implementation has a bug in it. To give more verbose output,
+  set <tt>debugEnabled = true</tt> in <tt>mapreduce/common.go</tt>, and add
+  <tt>-v</tt> to the test command above. You will get much more
+  output along the lines of:
 
 <pre>
 $ go test -v -run Sequential

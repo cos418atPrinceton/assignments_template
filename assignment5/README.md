@@ -163,7 +163,7 @@
   how sophisticated your implementation is.
   From the <tt>src/kvraft</tt> directory:
   <pre>
-$ go test -v -run Basic
+$ go test -v -run TestBasic
 === RUN   TestBasic
 Test: One client ...
   ... Passed

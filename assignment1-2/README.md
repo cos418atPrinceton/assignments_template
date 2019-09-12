@@ -292,14 +292,11 @@ $ git commit -am "[you fill me in]"
 $ git tag -a -m "i finished assignment 1-2" a12-handin
 $ git push origin master
 $ git push origin a12-handin
-$
 ```
 
 You should verify that you are able to see your final commit and your
 a12-handin tag on the Github page in your repository for this
 assignment.
-
-You will receive full credit if your software passes the Sequential tests in <tt>test_test.go</tt> and <tt>test-wc.sh</tt>.
 
 We will use the timestamp of your **last** tag for the
 purpose of calculating late days, and we will only grade that version of the
@@ -312,18 +309,11 @@ code. (We'll also know if you backdate the tag, don't do that.)
 
 <p>
   You will receive full credit for Part I if your software passes
-  the Sequential tests (as run by the <tt>go test</tt> commands above) on the CS servers.
+  the Sequential tests in <tt>test_test.go</tt> and <tt>test-wc.sh</tt> (as run by the <tt>go test</tt> commands above) on the CS servers.
   You will receive full credit for Part II if your Map/Reduce word count
   output matches the correct output for the sequential
   execution above when run on the CS servers.
 </p>
-
-<p>
-  The final portion of your credit is determined by code quality tests, using the standard tools <tt>gofmt</tt> and <tt>go vet</tt>.
-  You will receive full credit for this portion if all files submitted conform to the style standards set by <tt>gofmt</tt> and the report from <tt>go vet</tt> is clean for your mapreduce package (that is, produces no errors).
-  If your code does not pass the <tt>gofmt</tt> test, you should reformat your code using the tool. You can also use the <a href="https://github.com/qiniu/checkstyle">Go Checkstyle</a> tool for advice to improve your code's style, if applicable.  Additionally, though not part of the graded cheks, it would also be advisable to produce code that complies with <a href="https://github.com/golang/lint">Golint</a> where possible.
-</p>
-
 
 <h2>Acknowledgements</h2>
 <p>This assignment is adapted from MIT's 6.824 course. Thanks to Frans Kaashoek, Robert Morris, and Nickolai Zeldovich for their support.</p>

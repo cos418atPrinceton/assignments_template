@@ -121,7 +121,7 @@ f[nIn-1]-0, ..., f[nIn-1]-[nReduce-1].
 </p>
 
 
-<h2>Part I: Map/Reduce input and output</h2>
+<h2>Part A: Map/Reduce input and output</h2>
 <p>
   The Map/Reduce implementation you are given is missing some
   pieces. Before you can write your first Map/Reduce function
@@ -179,7 +179,7 @@ ok  mapreduce4.635s
 </pre>
 
 
-<h2>Part II: Single-worker word count</h3>
+<h2>Part B: Single-worker word count</h3>
 <p>
   Now that the map and reduce tasks are connected, we can start
   implementing some interesting Map/Reduce operations. For this
@@ -315,9 +315,9 @@ code. (We'll also know if you backdate the tag, don't do that.)
 </p>
 
 <p>
-  You will receive full credit for Part I if your software passes
+  You will receive full credit for Part A if your software passes
   the Sequential tests in <tt>test_test.go</tt> and <tt>test-wc.sh</tt> (as run by the <tt>go test</tt> commands above) on the CS servers.
-  You will receive full credit for Part II if your Map/Reduce word count
+  You will receive full credit for Part B if your Map/Reduce word count
   output matches the correct output for the sequential
   execution above when run on the CS servers.
 </p>

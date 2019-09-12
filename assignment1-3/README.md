@@ -2,7 +2,7 @@
 
 <h2>Introduction</h2>
 <p>
-  This part of the assignment continues the work from assignment 1.2 &mdash; building a Map/Reduce
+  This part of the assignment continues from assignment 1 part 2 &mdash; building a Map/Reduce
   library as a way to learn the Go programming language and as a way to learn
   about fault tolerance in distributed systems. You will
   tackle a distributed version of the Map/Reduce library, writing code for a master
@@ -16,7 +16,7 @@
 <h2>Software</h2>
 
 <p>
-  You will use the same mapreduce package as in assignment 1.2, focusing this time on the distributed mode.
+  You will use the same mapreduce package as in assignment 1-2, focusing this time on the distributed mode.
 </p>
 
 <p>
@@ -43,13 +43,13 @@ $ ls assignment1-3/src
 main      mapreduce
 </pre>
 
-<h2>Part I: Distributing MapReduce tasks</h2>
+<h2>Part C: Distributing MapReduce Tasks</h2>
 
 <p>
   One of Map/Reduce's biggest selling points is that the
   developer should not need to be aware that their code is
   running in parallel on many machines. In theory, we should be
-  able to take the word count code you wrote in Part II of assignment 1.2, and
+  able to take the word count code you wrote in Part B of assignment 1-2, and
   automatically parallelize it!
 </p>
 
@@ -119,7 +119,7 @@ main      mapreduce
 
 <p>
   To test your solution, you should use the same Go test suite as
-  you did in Part I of assignment 1.2, except swapping out <tt>-run Sequential</tt>
+  you did in Part A of assignment 1-2, except swapping out <tt>-run Sequential</tt>
   with <tt>-run TestBasic</tt>. This will execute the distributed
   test case without worker failures instead of the sequential
   ones we were running before. Remember to set your <tt>GOPATH</tt> first.
@@ -166,7 +166,7 @@ PASS
 ok  mapreduce25.613s</pre>
 </p>
 
-<h2>Part II: Handling worker failures</h2>
+<h2>Part D: Handling worker failures</h2>
 
 <p>
   In this part you will make the master handle failed workers.
@@ -210,7 +210,7 @@ ok  mapreduce25.613s</pre>
 </p>
 
 
-<h2>Part III: Inverted index generation</h2>
+<h2>Part E: Inverted index generation</h2>
 <p>
   Word count is a classical example of a Map/Reduce
   application, but it is not an application that many
@@ -335,7 +335,7 @@ $ git push origin master a13-handin
 <p>Recall, in order to overwrite a tag use the force flag as follows.</p>
 
 ```bash
-$ git tag -fam "i finished assignment 1-2" a12-handin
+$ git tag -fam "i finished assignment 1-3" a13-handin
 $ git push -f --tags
 ```
 
@@ -343,10 +343,10 @@ You should verify that you are able to see your final commit and tags
 on the Github page of your repository for this assignment.
 
 <p>
-  You will receive full credit for Part I if your software passes
-  <tt>TestBasic</tt> in <tt>test_test.go</tt> (the test given in Part I) on the CS servers.
-  You will receive full credit for Part II if your software passes the tests with worker failures (the <tt>Failure</tt> pattern to <tt>go test</tt> given in Part II) on the CS servers.
-  You will receive full credit for Part II if your index output matches the correct output when run on the CS servers.
+  You will receive full credit for Part C if your software passes
+  <tt>TestBasic</tt> in <tt>test_test.go</tt> on the CS servers.
+  You will receive full credit for Part D if your software passes the tests with worker failures (<tt>TestOneFailure</tt> and <tt>TestManyFailures</tt> in <tt>test_test.go</tt>) on the CS servers.
+  You will receive full credit for Part E if your index output matches the correct output when run on the CS servers (as in <tt>test-ii.go</tt>).
 </p>
 
 

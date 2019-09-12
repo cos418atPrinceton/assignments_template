@@ -215,9 +215,14 @@ You hand in your assignment as before.
 ```bash
 $ git commit -am "[you fill me in]"
 $ git tag -a -m "i finished assignment 3" a3-handin
-$ git push origin master
-$ git push origin a3-handin
-$
+$ git push origin master a3-handin
+```
+
+<p>Recall, in order to overwrite a tag use the force flag as follows.</p>
+
+```bash
+$ git tag -fam "i finished assignment 3" a3-handin
+$ git push -f --tags
 ```
 
 You should verify that you are able to see your final commit and tags
@@ -227,12 +232,6 @@ on the Github page of your repository for this assignment.
   Before submitting, please run the full tests given above for both parts one final time. 
   You will receive full credit for the leader election component if your software passes
   the Election tests (as run by the <tt>go test</tt> commands above) on the CS servers.
-</p>
-
-<p>
-  The final portion of your credit is determined by code quality tests, using the standard tools <tt>gofmt</tt> and <tt>go vet</tt>.
-  You will receive full credit for this portion if all files submitted conform to the style standards set by <tt>gofmt</tt> and the report from <tt>go vet</tt> is clean for your raft package (that is, produces no errors).
-  If your code does not pass the <tt>gofmt</tt> test, you should reformat your code using the tool. You can also use the <a href="https://github.com/qiniu/checkstyle">Go Checkstyle</a> tool for advice to improve your code's style, if applicable.  Additionally, though not part of the graded checks, it would also be advisable to produce code that complies with <a href="https://github.com/golang/lint">Golint</a> where possible.
 </p>
 
 <h2>Acknowledgements</h2>

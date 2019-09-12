@@ -23,7 +23,7 @@
 <p>
   If this sounds only vaguely familiar (or even if it's crystal clear), you are
   highly encouraged to go back to reread the
-  <a href="papers/raft.pdf">extended Raft paper</a>,
+  <a href="https://raft.github.io/raft.pdf">extended Raft paper</a>,
   the Raft lecture notes, and the
   <a href="http://thesecretlivesofdata.com/raft/">illustrated Raft guide</a>.
   You should, of course, also review your work from Assignment 3, as this assignment
@@ -134,7 +134,7 @@
   those marked "unreliable", you will need to implement the optimization to
   allow a follower to back up the leader's nextIndex by more than one entry
   at a time. See the description in the
-  <a href="papers/raft.pdf">extended Raft paper</a> starting at
+  <a href="https://raft.github.io/raft.pdf">extended Raft paper</a> starting at
   the bottom of page 7 and top of page 8 (marked by a gray line).
 </p>
 

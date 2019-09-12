@@ -23,8 +23,7 @@
 <p>
   For the next two parts of this assignment, we will provide you with a significant amount of scaffolding code to get started.
   The relevant code is under this directory.
-  We will ensure that all the code we supply works on the CS servers (cycles.cs.princeton.edu).
-  We expect that it is likely to work on your own development environment that supports Go.
+  We will ensure that all the code we supply works on the CS servers (cycles/courselab).
 </p>
 
 
@@ -45,7 +44,7 @@
 
 <h3>Getting familiar with the source</h3>
 <p>
-  The mapreduce package (located at <tt>$GOPATH/src/mapreduce</tt>) provides a simple Map/Reduce library with
+  The mapreduce package (located at <tt>src/mapreduce</tt>) provides a simple Map/Reduce library with
   a sequential implementation. Applications would normally call
   <tt>Distributed()</tt> &mdash; located in <tt>mapreduce/master.go</tt> &mdash; to start a job, but may
   instead call <tt>Sequential()</tt> &mdash; also in <tt>mapreduce/master.go</tt> &mdash; to get a
@@ -118,7 +117,7 @@ f[nIn-1]-0, ..., f[nIn-1]-[nReduce-1].
   for this assignment, you will write/modify <strong>only</strong> <tt>doMap</tt>
   in <tt>mapreduce/common_map.go</tt>,  <tt>doReduce</tt> in <tt>mapreduce/common_reduce.go</tt>,
   and <tt>mapF</tt> and <tt>reduceF</tt> in <tt>main/wc.go</tt>. You will not be able to submit
-  other files or modules.
+  other files or modules. In other words, any helper functions must reside within these listed files.
 </p>
 
 
@@ -146,10 +145,10 @@ f[nIn-1]-0, ..., f[nIn-1]-[nReduce-1].
   starting from the <tt>418/assignment1-2</tt> directory:
 
 <pre>
-# Go needs $GOPATH to be set to the directory containing "src"
 $ cd 418/assignment1-2
 $ ls
 README.md src
+# Go needs $GOPATH to be set to the directory containing "src"
 $ export GOPATH="$PWD"
 $ cd src
 $ go test -run Sequential mapreduce/...
@@ -158,10 +157,8 @@ ok  mapreduce 4.515s
 
 <p>
   If the output did not show <em>ok</em> next to the tests, your
-  implementation has a bug in it. To give more verbose output,
-  set <tt>debugEnabled = true</tt> in <tt>mapreduce/common.go</tt>, and add
-  <tt>-v</tt> to the test command above. You will get much more
-  output along the lines of:
+  implementation has a bug in it. Note that we set<tt>debugEnabled = true</tt> in <tt>mapreduce/common.go</tt> so that you will get much more
+  output. When run with <tt>-v</tt> you will see output along the lines of:
 
 <pre>
 $ go test -v -run Sequential
@@ -200,7 +197,7 @@ ok  mapreduce4.635s
   the <tt>main</tt> directory, downloaded from <a
                                        href="https://www.gutenberg.org/ebooks/search/%3Fsort_order%3Ddownloads">Project
     Gutenberg</a>.
-  This is the result when you initially try to compile the code we provide you
+  Remember to set GOPATH before continuing. This is the result when you initially try to compile the code we provide you
   and run it:
 <pre>
 $ cd "$GOPATH/src/main"
@@ -279,8 +276,7 @@ You can remove the output file and all intermediate files with:
     to split a string into components.
   </li>
   <li>
-    the strconv package
-    (<a href="http://golang.org/pkg/strconv/">http://golang.org/pkg/strconv/</a>)
+    the <a href="http://golang.org/pkg/strconv/">strconv package</a>
     is handy to convert strings to integers etc.
   </li>
 </ul>

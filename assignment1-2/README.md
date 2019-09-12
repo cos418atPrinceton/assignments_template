@@ -197,7 +197,7 @@ ok  mapreduce4.635s
   the <tt>main</tt> directory, downloaded from <a
                                        href="https://www.gutenberg.org/ebooks/search/%3Fsort_order%3Ddownloads">Project
     Gutenberg</a>.
-  Remember to set GOPATH before continuing. This is the result when you initially try to compile the code we provide you
+  Remember to set <tt>GOPATH</tt> before continuing. This is the result when you initially try to compile the code we provide you
   and run it:
 <pre>
 $ cd "$GOPATH/src/main"
@@ -290,13 +290,20 @@ your progress:
 ```bash
 $ git commit -am "[you fill me in]"
 $ git tag -a -m "i finished assignment 1-2" a12-handin
-$ git push origin master
-$ git push origin a12-handin
+$ git push origin master a12-handin
 ```
 
 You should verify that you are able to see your final commit and your
 a12-handin tag on the Github page in your repository for this
 assignment.
+
+<p>Recall, in order to overwrite a tag use the force flag as follows.</p>
+
+```bash
+$ git tag -fam "i finished assignment 1-2" a12-handin
+$ git push -f --tags
+```
+
 
 We will use the timestamp of your **last** tag for the
 purpose of calculating late days, and we will only grade that version of the

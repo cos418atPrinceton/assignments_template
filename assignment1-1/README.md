@@ -6,8 +6,10 @@
   yourself with the Go programming language. We expect you to already have a
   basic knowledge of the language. If you're starting from nothing, we highly
   recommend going through the <a href="http://tour.golang.org/list">Golang tour</a>
-  before you begin this assignment. Get started by
-  <a href="https://golang.org/doc/install">installing Go</a> on your machine.
+  before you begin this assignment.
+</p>
+<p>
+  You may choose to <a href="https://golang.org/doc/install">install Go</a> on your machine and work locally, but all submitted work must pass the tests when run on Princeton's courselab servers.
 </p>
 <h2>Software</h2>
 <p>
@@ -73,4 +75,4 @@ $ git tag -am "i finished assignment 1-1" a11-handin
 $ git push --tags
 ```
 
-<p>Alternatively, consult the man page on how to use the force flag.</p>
+<p>Alternatively, consult the man page on how to use the force flag with git tag and push.</p>

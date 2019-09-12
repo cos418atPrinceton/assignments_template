@@ -9,10 +9,9 @@
   before you begin this assignment. Get started by
   <a href="https://golang.org/doc/install">installing Go</a> on your machine.
 </p>
-  <!-- In this class we will use the latest stable version 1.9.  -->
 <h2>Software</h2>
 <p>
-  You will find the code the same directory. The two problems that you need to solve are in <tt>q1.go</tt>
+  You will find the code in the same directory as this readme. The two problems that you need to solve are in <tt>q1.go</tt>
   and <tt>q2.go</tt>. You should only add code to places that say <tt>TODO: implement me</tt>. 
   Do not change any of the function signatures as our testing framework uses them.
 </p>
@@ -21,7 +20,7 @@
   <b>Q1 - Top K words:</b> The task is to find the <tt>K</tt> most common words in a
   given document. To exclude common words such as "a" and "the", the user of your program
   should be able to specify the minimum character threshold for a word. Word matching is
-  case insensitive and punctuations should be removed. You can find more details on what
+  case insensitive and punctuation should be removed. You can find more details on what
   qualifies as a word in the comments in the code.
 </p>
 

@@ -23,7 +23,7 @@
 <p>
   If this sounds only vaguely familiar (or even if it's crystal clear), you are
   highly encouraged to go back to reread the
-  <a href="papers/raft.pdf">extended Raft paper</a>,
+  <a href="https://raft.github.io/raft.pdf">extended Raft paper</a>,
   the Raft lecture notes, and the
   <a href="http://thesecretlivesofdata.com/raft/">illustrated Raft guide</a>.
   You should, of course, also review your work from Assignment 3, as this assignment
@@ -134,7 +134,7 @@
   those marked "unreliable", you will need to implement the optimization to
   allow a follower to back up the leader's nextIndex by more than one entry
   at a time. See the description in the
-  <a href="papers/raft.pdf">extended Raft paper</a> starting at
+  <a href="https://raft.github.io/raft.pdf">extended Raft paper</a> starting at
   the bottom of page 7 and top of page 8 (marked by a gray line).
 </p>
 
@@ -176,10 +176,7 @@
 <li>
   In order to avoid running out of memory, Raft must periodically
   discard old log entries, but you <strong>do not</strong> have
-  to worry about garbage collecting the log in this lab. You will
-  implement that in the next lab by using snapshotting (Section 7
-  in the paper).
-</li>
+  to worry about garbage collecting the log in this lab.</li>
 
 ## Submitting Assignment
 
@@ -188,9 +185,14 @@ You hand in your assignment as before.
 ```bash
 $ git commit -am "[you fill me in]"
 $ git tag -a -m "i finished assignment 4" a4-handin
-$ git push origin master
-$ git push origin a4-handin
-$
+$ git push origin master a4-handin
+```
+
+<p>Recall, in order to overwrite a tag use the force flag as follows.</p>
+
+```bash
+$ git tag -fam "i finished assignment 4" a4-handin
+$ git push -f --tags
 ```
 
 You should verify that you are able to see your final commit and tags
@@ -200,12 +202,6 @@ on the Github page of your repository for this assignment.
 <p>
   You will receive full credit for Part I if your software passes the tests mentioned for that section on the CS servers.
   You will receive full credit for Part II if your software passes the tests mentioned for that section on the CS servers.
-</p>
-
-<p>
-  The final portion of your credit is determined by code quality tests, using the standard tools <tt>gofmt</tt> and <tt>go vet</tt>.
-  You will receive full credit for this portion if all files submitted conform to the style standards set by <tt>gofmt</tt> and the report from <tt>go vet</tt> is clean for your raft package (that is, produces no errors).
-  If your code does not pass the <tt>gofmt</tt> test, you should reformat your code using the tool. You can also use the <a href="https://github.com/qiniu/checkstyle">Go Checkstyle</a> tool for advice to improve your code's style, if applicable.  Additionally, though not part of the graded cheks, it would also be advisable to produce code that complies with <a href="https://github.com/golang/lint">Golint</a> where possible.
 </p>
 
 <h2>Acknowledgements</h2>

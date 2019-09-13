@@ -3,9 +3,9 @@
 <h2>Introduction</h2>
 <p>
   In this assignment you will implement the
-  <a href=papers/chandy_lamport.pdf>Chandy-Lamport algorithm</a> for distributed snapshots.
+  <a href="https://lamport.azurewebsites.net/pubs/chandy.pdf">Chandy-Lamport algorithm</a> for distributed snapshots.
   Your snapshot algorithm will be implemented on top of a token passing system, similar
-  to the ones presented in <a href="docs/P4-distributed-snapshots.zip">Precept 4</a> and in
+  to the ones presented in precept and in
   the Chandy-Lamport paper.
 
   The algorithm makes the following assumptions:
@@ -79,9 +79,14 @@ You hand in your assignment as before.
 ```bash
 $ git commit -am "[you fill me in]"
 $ git tag -a -m "i finished assignment 2" a2-handin
-$ git push origin master
-$ git push origin a2-handin
-$
+$ git push origin master a2-handin
+```
+
+<p>Recall, in order to overwrite a tag use the force flag as follows.</p>
+
+```bash
+$ git tag -fam "i finished assignment 2" a2-handin
+$ git push -f --tags
 ```
 
 You should verify that you are able to see your final commit and tags

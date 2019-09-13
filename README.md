@@ -2,7 +2,22 @@
 
 ### Environment Setup
 
-Please follow <a href="setup.md">these instructions</a> for setting up for Go environment for assignments, as well as pointers to some necessary/useful tools.
+Teaching support is only provided for work done using the cycles or courselab servers. The tests are known to work under Go 1.9. Thus later version 1 releases should also work. Learn more about semantic versioning [here](https://semver.org/). Please follow <a href="setup.md">these instructions</a> for requesting access to the servers if you have not already done so.
+
+### Tools
+<p>
+ There are many commonly used tools in the Go ecosystem. The three most useful starting out are:
+ <a href="https://golang.org/cmd/gofmt/">Go fmt</a> and <a href="https://golang.org/cmd/vet/">Go vet</a>, which are built-ins, and <a href="https://github.com/golang/lint">Golint</a>, which is similar to the <tt>splint</tt> tool you used in COS217.
+</p>
+
+### Editors
+<p>
+ For those of you in touch with your systems side (this <em>is</em> Distributed Systems, after all), there are quite a few resources for Go development in both <a href="https://github.com/dominikh/go-mode.el">emacs</a> (additional information available <a href="http://dominik.honnef.co/posts/2013/03/emacs-go-1/">here</a>) and <a href="https://github.com/fatih/vim-go">vim</a> (additional resources <a href="http://farazdagi.com/blog/2015/vim-as-golang-ide/">here</a>).
+</p>
+
+<p>
+ As many Princeton COS students have become attached to Sublime, here are the two indispensible Sublime packages for Go development: <a href="https://github.com/DisposaBoy/GoSublime">GoSublime</a> and <a href="https://github.com/golang/sublime-build">Sublime-Build</a>. And -- learning from the ancient emacs-vi holy war -- it would be inviting trouble to offer Sublime information without likewise dispensing the must-have Atom plugin: <a href="https://atom.io/packages/go-plus">Go-Plus</a> (walkthrough and additional info <a href="https://rominirani.com/setup-go-development-environment-with-atom-editor-a87a12366fcf#.v49dtbadi">here</a>).
+</p>
 
 ### Coding Style
 
@@ -11,22 +26,15 @@ Make sure that your code has proper indentation, descriptive comments,
 and a comment header at the beginning of each file, which includes
 your name, userid, and a description of the file.</p>
 
-<p>A portion of credit for each assignment is determined by code
-quality tests, using the standard tools <tt>gofmt</tt> and <tt>go
-vet</tt>.  You will receive full credit for this portion if all files
-submitted conform to the style standards set by <tt>gofmt</tt> and the
-report from <tt>go vet</tt> is clean (that is, produces no errors).
-If your code does not pass the <tt>gofmt</tt> test, you should
-reformat your code using the tool. You can also use the <a
+<p>It is recommended to use the standard tools <tt>gofmt</tt> and <tt>go
+vet</tt>. You can also use the <a
 href="https://github.com/qiniu/checkstyle">Go Checkstyle</a> tool for
-advice to improve your code's style, if applicable.  Additionally,
-though not part of the graded cheks, it would also be advisable to
+advice on how to improve your code's style. It would also be advisable to
 produce code that complies with <a
 href="https://github.com/golang/lint">Golint</a> where possible. </p>
 
 <h3>How do I git?</h3>
-This page has some useful tutorials on git: <a href="https://www.atlassian.com/git/tutorial">Git Tutorials</a></br>
-In particular, tutorials 1 and 5 will be most useful for this course.</p>
+<p>Please read this <a href="https://git-scm.com/docs/gittutorial">Git Tutorial</a>.</p>
 
 <p>The basic git workflow in the shell (assuming you already have a repo set up):</br>
 <ul>
@@ -39,13 +47,10 @@ In particular, tutorials 1 and 5 will be most useful for this course.</p>
 </ul>
 </p>
 
-<p>Finally, <a href="https://confluence.atlassian.com/display/BITBUCKET/Bitbucket+101">Bitbucket 101</a> is another good resource.</p>
-
-
-<p> All programming assignments, require Git for submission. <p> We are using Github for distributing and collecting your assignments. At the time of seeing this, you should have already joined the [COS418F18](https://github.com/orgs/COS418F18) organization on Github and forked your private repository. You will need to develop in a *nix environment, i.e., Linux or OS X. Your Github page should have a link. Normally, you only need to clone the repository once, and you will have everything you need for all the assignments in this class.
+<p> All programming assignments, require Git for submission. <p> We are using Github for distributing and collecting your assignments. At the time of seeing this, you should have already joined the <a href="https://github.com/orgs/COS418F19">COS418F19</a> organization on Github and forked your private repository. Your Github page should have a link. Normally, you only need to clone the repository once, and you will have everything you need for all the assignments in this class.
 
 ```bash
-$ git clone https://github.com/COS418F18/assignments-myusername.git 418
+$ git clone https://github.com/COS418F19/assignments-myusername.git 418
 $ cd 418
 $ ls
 assignment1-1  assignment1-2  assignment1-3  assignment2  assignment3  assignment4  assignment5  README.md  setup.md
@@ -76,6 +81,6 @@ $
 
 As you complete parts of the assignments (and begin future assignments) we'll ask you push tags. You should also be committing and pushing your progress regularly.
 
-### Steping into Assignment 1-1
+### Stepping into Assignment 1-1
 
-Now it's time to go to assignment 1-1 folder to begin your adventure!
+Now it's time to go to the [assignment 1-1](assignment1-1) folder to begin your adventure!

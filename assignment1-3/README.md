@@ -2,9 +2,9 @@
 
 <h2>Introduction</h2>
 <p>
-  Part c continues the work from assignment 1.2 &mdash; building a Map/Reduce
+  This part of the assignment continues from assignment 1 part 2 &mdash; building a Map/Reduce
   library as a way to learn the Go programming language and as a way to learn
-  about fault tolerance in distributed systems. In this part of the assignment, you will
+  about fault tolerance in distributed systems. You will
   tackle a distributed version of the Map/Reduce library, writing code for a master
   that hands out tasks to multiple workers and handles failures in workers.
   The interface to the library and the approach to fault tolerance is similar to the one described in
@@ -16,22 +16,22 @@
 <h2>Software</h2>
 
 <p>
-  You will use the same mapreduce package as in part b, focusing this time on the distributed mode.
+  You will use the same mapreduce package as in assignment 1-2, focusing this time on the distributed mode.
 </p>
 
 <p>
   Over the course of this assignment, you will have to
-  modify <tt>schedule</tt> from  <tt>schedule.go</tt>, as well
+  modify <tt>schedule</tt> in <tt>schedule.go</tt>, as well
   as <tt>mapF</tt> and <tt>reduceF</tt> in <tt>main/ii.go</tt>.
 </p>
 
 <p>
-  As with the previous part of this assignment, you should not need to modify any other files, but reading them
+  As with the previous part of this assignment, you should not modify any other files, but reading them
   might be useful in order to understand how the other methods
   fit into the overall architecture of the system.
 </p>
 
-To get start, copy all source files from `assignment1-2/src` to `assignment1-3/src`
+To get started, copy all source files from `assignment1-2/src` to `assignment1-3/src` as follows.
 
 <pre>
 # start from your 418 GitHub repo
@@ -43,13 +43,13 @@ $ ls assignment1-3/src
 main      mapreduce
 </pre>
 
-<h2>Part I: Distributing MapReduce tasks</h2>
+<h2>Part C: Distributing MapReduce Tasks</h2>
 
 <p>
   One of Map/Reduce's biggest selling points is that the
   developer should not need to be aware that their code is
   running in parallel on many machines. In theory, we should be
-  able to take the word count code you wrote in Part II of assignment 1.2, and
+  able to take the word count code you wrote in Part B of assignment 1-2, and
   automatically parallelize it!
 </p>
 
@@ -58,7 +58,7 @@ main      mapreduce
   after another on the master. While this is conceptually simple,
   it is not great for performance. In this part of the assignment, you
   will complete a version of MapReduce that splits the work up
-  over a set of worker threads, in order to exploit multiple
+  over a set of worker threads in order to exploit multiple
   cores. Computing the map tasks in parallel and then the reduce tasks can
   result in much faster completion, but is also harder to implement and debug.
   Note that for this part of the assignment, the work is not distributed across multiple
@@ -119,10 +119,10 @@ main      mapreduce
 
 <p>
   To test your solution, you should use the same Go test suite as
-  you did in Part I of assignment 1.2, except swapping out <tt>-run Sequential</tt>
+  you did in Part A of assignment 1-2, except swapping out <tt>-run Sequential</tt>
   with <tt>-run TestBasic</tt>. This will execute the distributed
   test case without worker failures instead of the sequential
-  ones we were running before:
+  ones we were running before. Remember to set your <tt>GOPATH</tt> first.
   <pre>$ go test -run TestBasic mapreduce/...</pre>
   As before, you can get more verbose output for debugging if you
   set <tt>debugEnabled = true</tt> in <tt>mapreduce/common.go</tt>, and add
@@ -166,7 +166,7 @@ PASS
 ok  mapreduce25.613s</pre>
 </p>
 
-<h2>Part II: Handling worker failures</h2>
+<h2>Part D: Handling worker failures</h2>
 
 <p>
   In this part you will make the master handle failed workers.
@@ -204,13 +204,13 @@ ok  mapreduce25.613s</pre>
   worker, while the second test case tests handling of many
   failures of workers. Periodically, the test cases start new
   workers that the master can use to make forward progress, but
-  these workers fail after handling a few tasks. To run these
-  tests:
+  these workers fail after handling a few tasks. Run these
+  tests as follows. Remember to set your <tt>GOPATH</tt> first.
   <pre>$ go test -run Failure mapreduce/...</pre>
 </p>
 
 
-<h2>Part III: Inverted index generation</h2>
+<h2>Part E: Inverted index generation</h2>
 <p>
   Word count is a classical example of a Map/Reduce
   application, but it is not an application that many
@@ -238,7 +238,7 @@ ok  mapreduce25.613s</pre>
   <tt>reduceF</tt> in <tt>main/ii.go</tt> so that they
   together produce an inverted index. Running
   <tt>ii.go</tt> should output a list of tuples, one per
-  line, in the following format:
+  line, in the following format. Remember to set your <tt>GOPATH</tt> first.
 <pre>
 $ go run ii.go master sequential pg-*.txt
 $ head -n5 mrtmp.iiseq
@@ -297,7 +297,7 @@ yours: 15 pg-being_ernest.txt,pg-dorian_gray.txt,pg-dracula.txt,pg-emma.txt,pg-f
 
   <li>
     The code we give you runs the workers as threads within a
-    single UNIX process, and can exploit multiple cores on a single
+    single process, and can exploit multiple cores on a single
     machine. Some modifications would be needed in order to run the
     workers on multiple machines communicating over a network. The
     RPCs would have to use TCP rather than UNIX-domain sockets;
@@ -329,27 +329,25 @@ You hand in your assignment as before.
 ```bash
 $ git commit -am "[you fill me in]"
 $ git tag -a -m "i finished assignment 1-3" a13-handin
-$ git push origin master
-$ git push origin a13-handin
-$
+$ git push origin master a13-handin
+```
+
+<p>Recall, in order to overwrite a tag use the force flag as follows.</p>
+
+```bash
+$ git tag -fam "i finished assignment 1-3" a13-handin
+$ git push -f --tags
 ```
 
 You should verify that you are able to see your final commit and tags
 on the Github page of your repository for this assignment.
 
 <p>
-  You will receive full credit for Part I if your software passes
-  <tt>TestBasic</tt> from <tt>test_test.go</tt> (the test given in Part I) on the CS servers.
-  You will receive full credit for Part II if your software passes the tests with worker failures (the <tt>Failure</tt> pattern to <tt>go test</tt> given in Part II) on the CS servers.
-  You will receive full credit for Part II if your index output matches the correct output when run on the CS servers.
+  You will receive full credit for Part C if your software passes
+  <tt>TestBasic</tt> in <tt>test_test.go</tt> on the CS servers.
+  You will receive full credit for Part D if your software passes the tests with worker failures (<tt>TestOneFailure</tt> and <tt>TestManyFailures</tt> in <tt>test_test.go</tt>) on the CS servers.
+  You will receive full credit for Part E if your index output matches the correct output when run on the CS servers (as in <tt>test-ii.go</tt>).
 </p>
-
-<p>
-  The final portion of your credit is determined by code quality tests, using the standard tools <tt>gofmt</tt> and <tt>go vet</tt>.
-  You will receive full credit for this portion if all files submitted conform to the style standards set by <tt>gofmt</tt> and the report from <tt>go vet</tt> is clean for your mapreduce package (that is, produces no errors).
-  If your code does not pass the <tt>gofmt</tt> test, you should reformat your code using the tool. You can also use the <a href="https://github.com/qiniu/checkstyle">Go Checkstyle</a> tool for advice to improve your code's style, if applicable.  Additionally, though not part of the graded cheks, it would also be advisable to produce code that complies with <a href="https://github.com/golang/lint">Golint</a> where possible.
-</p>
-
 
 
 <h2>Acknowledgements</h2>

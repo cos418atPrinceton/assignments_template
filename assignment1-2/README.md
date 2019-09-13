@@ -23,8 +23,7 @@
 <p>
   For the next two parts of this assignment, we will provide you with a significant amount of scaffolding code to get started.
   The relevant code is under this directory.
-  We will ensure that all the code we supply works on the CS servers (cycles.cs.princeton.edu).
-  We expect that it is likely to work on your own development environment that supports Go.
+  We will ensure that all the code we supply works on the CS servers (cycles/courselab).
 </p>
 
 
@@ -45,7 +44,7 @@
 
 <h3>Getting familiar with the source</h3>
 <p>
-  The mapreduce package (located at <tt>$GOPATH/src/mapreduce</tt>) provides a simple Map/Reduce library with
+  The mapreduce package (located at <tt>src/mapreduce</tt>) provides a simple Map/Reduce library with
   a sequential implementation. Applications would normally call
   <tt>Distributed()</tt> &mdash; located in <tt>mapreduce/master.go</tt> &mdash; to start a job, but may
   instead call <tt>Sequential()</tt> &mdash; also in <tt>mapreduce/master.go</tt> &mdash; to get a
@@ -118,11 +117,11 @@ f[nIn-1]-0, ..., f[nIn-1]-[nReduce-1].
   for this assignment, you will write/modify <strong>only</strong> <tt>doMap</tt>
   in <tt>mapreduce/common_map.go</tt>,  <tt>doReduce</tt> in <tt>mapreduce/common_reduce.go</tt>,
   and <tt>mapF</tt> and <tt>reduceF</tt> in <tt>main/wc.go</tt>. You will not be able to submit
-  other files or modules.
+  other files or modules. In other words, any helper functions must reside within these listed files.
 </p>
 
 
-<h2>Part I: Map/Reduce input and output</h2>
+<h2>Part A: Map/Reduce input and output</h2>
 <p>
   The Map/Reduce implementation you are given is missing some
   pieces. Before you can write your first Map/Reduce function
@@ -146,10 +145,10 @@ f[nIn-1]-0, ..., f[nIn-1]-[nReduce-1].
   starting from the <tt>418/assignment1-2</tt> directory:
 
 <pre>
-# Go needs $GOPATH to be set to the directory containing "src"
 $ cd 418/assignment1-2
 $ ls
 README.md src
+# Go needs $GOPATH to be set to the directory containing "src"
 $ export GOPATH="$PWD"
 $ cd src
 $ go test -run Sequential mapreduce/...
@@ -182,7 +181,7 @@ ok  mapreduce4.635s
 </pre>
 
 
-<h2>Part II: Single-worker word count</h3>
+<h2>Part B: Single-worker word count</h3>
 <p>
   Now that the map and reduce tasks are connected, we can start
   implementing some interesting Map/Reduce operations. For this
@@ -200,7 +199,7 @@ ok  mapreduce4.635s
   the <tt>main</tt> directory, downloaded from <a
                                        href="https://www.gutenberg.org/ebooks/search/%3Fsort_order%3Ddownloads">Project
     Gutenberg</a>.
-  This is the result when you initially try to compile the code we provide you
+  Remember to set <tt>GOPATH</tt> before continuing. This is the result when you initially try to compile the code we provide you
   and run it:
 <pre>
 $ cd "$GOPATH/src/main"
@@ -279,8 +278,7 @@ You can remove the output file and all intermediate files with:
     to split a string into components.
   </li>
   <li>
-    the strconv package
-    (<a href="http://golang.org/pkg/strconv/">http://golang.org/pkg/strconv/</a>)
+    the <a href="http://golang.org/pkg/strconv/">strconv package</a>
     is handy to convert strings to integers etc.
   </li>
 </ul>
@@ -294,16 +292,20 @@ your progress:
 ```bash
 $ git commit -am "[you fill me in]"
 $ git tag -a -m "i finished assignment 1-2" a12-handin
-$ git push origin master
-$ git push origin a12-handin
-$
+$ git push origin master a12-handin
 ```
 
 You should verify that you are able to see your final commit and your
 a12-handin tag on the Github page in your repository for this
 assignment.
 
-You will receive full credit if your software passes the Sequential tests in <tt>test_test.go</tt> and <tt>test-wc.sh</tt>.
+<p>Recall, in order to overwrite a tag use the force flag as follows.</p>
+
+```bash
+$ git tag -fam "i finished assignment 1-2" a12-handin
+$ git push -f --tags
+```
+
 
 We will use the timestamp of your **last** tag for the
 purpose of calculating late days, and we will only grade that version of the
@@ -315,19 +317,12 @@ code. (We'll also know if you backdate the tag, don't do that.)
 </p>
 
 <p>
-  You will receive full credit for Part I if your software passes
-  the Sequential tests (as run by the <tt>go test</tt> commands above) on the CS servers.
-  You will receive full credit for Part II if your Map/Reduce word count
+  You will receive full credit for Part A if your software passes
+  the Sequential tests in <tt>test_test.go</tt> and <tt>test-wc.sh</tt> (as run by the <tt>go test</tt> commands above) on the CS servers.
+  You will receive full credit for Part B if your Map/Reduce word count
   output matches the correct output for the sequential
   execution above when run on the CS servers.
 </p>
-
-<p>
-  The final portion of your credit is determined by code quality tests, using the standard tools <tt>gofmt</tt> and <tt>go vet</tt>.
-  You will receive full credit for this portion if all files submitted conform to the style standards set by <tt>gofmt</tt> and the report from <tt>go vet</tt> is clean for your mapreduce package (that is, produces no errors).
-  If your code does not pass the <tt>gofmt</tt> test, you should reformat your code using the tool. You can also use the <a href="https://github.com/qiniu/checkstyle">Go Checkstyle</a> tool for advice to improve your code's style, if applicable.  Additionally, though not part of the graded cheks, it would also be advisable to produce code that complies with <a href="https://github.com/golang/lint">Golint</a> where possible.
-</p>
-
 
 <h2>Acknowledgements</h2>
 <p>This assignment is adapted from MIT's 6.824 course. Thanks to Frans Kaashoek, Robert Morris, and Nickolai Zeldovich for their support.</p>

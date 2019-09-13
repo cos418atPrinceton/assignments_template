@@ -11,7 +11,7 @@ import (
 //	charThreshold: character threshold for whether a token qualifies as a word,
 //		e.g. charThreshold = 5 means "apple" is a word but "pear" is not.
 // Matching is case insensitive, e.g. "Orange" and "orange" is considered the same word.
-// A word comprises alphanumeric characters only. All punctuations and other characters
+// A word comprises alphanumeric characters only. All punctuation and other characters
 // are removed, e.g. "don't" becomes "dont".
 // You should use `checkError` to handle potential errors.
 func topWords(path string, numWords int, charThreshold int) []WordCount {

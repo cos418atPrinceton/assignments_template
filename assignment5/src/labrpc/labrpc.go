@@ -87,7 +87,11 @@ func (e *ClientEnd) Call(svcMeth string, args interface{}, reply interface{}) bo
 
 	qb := new(bytes.Buffer)
 	qe := gob.NewEncoder(qb)
-	qe.Encode(args)
+	if err := qe.Encode(args); err != nil {
+		// NOTE: not sure if making this be Fatal is appropriate
+		// leaving as warning for now.
+		log.Printf("Warning: %v", err)
+	}
 	req.args = qb.Bytes()
 
 	e.ch <- req
@@ -429,7 +433,9 @@ func (svc *Service) dispatch(methname string, req reqMsg) replyMsg {
 		// decode the argument.
 		ab := bytes.NewBuffer(req.args)
 		ad := gob.NewDecoder(ab)
-		ad.Decode(args.Interface())
+		if err := ad.Decode(args.Interface()); err != nil {
+			log.Fatal(err)
+		}
 
 		// allocate space for the reply.
 		replyType := method.Type.In(2)
@@ -443,7 +449,9 @@ func (svc *Service) dispatch(methname string, req reqMsg) replyMsg {
 		// encode the reply.
 		rb := new(bytes.Buffer)
 		re := gob.NewEncoder(rb)
-		re.EncodeValue(replyv)
+		if err := re.EncodeValue(replyv); err != nil {
+			log.Fatal(err)
+		}
 
 		return replyMsg{true, rb.Bytes()}
 	} else {

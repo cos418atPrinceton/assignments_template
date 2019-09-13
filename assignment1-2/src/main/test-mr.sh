@@ -3,19 +3,21 @@ here=$(dirname "$0")
 [[ "$here" = /* ]] || here="$PWD/$here"
 export GOPATH="$here/../../"
 echo ""
-echo "==> Part I"
-go test -run Sequential mapreduce/...
+echo "==> Part A"
+go test -run TestSequentialSingle mapreduce/...
+go test -run TestSequentialMany mapreduce/...
 echo ""
-echo "==> Part II"
+echo "==> Part B"
 (cd "$here" && ./test-wc.sh > /dev/null)
 echo ""
-echo "==> Part III"
+echo "==> Part C"
 go test -run TestBasic mapreduce/...
 echo ""
-echo "==> Part IV"
-go test -run Failure mapreduce/...
+echo "==> Part D"
+go test -run TestOneFailure mapreduce/...
+go test -run TestManyFailures mapreduce/...
 echo ""
-echo "==> Part V (challenge)"
+echo "==> Part E"
 (cd "$here" && ./test-ii.sh > /dev/null)
 
 rm "$here"/mrtmp.* "$here"/diff.out

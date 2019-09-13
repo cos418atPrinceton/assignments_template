@@ -120,7 +120,7 @@ func (sim *Simulator) NotifySnapshotComplete(serverId string, snapshotId int) {
 // Collect and merge snapshot state from all the servers.
 // This function blocks until the snapshot process has completed on all servers.
 func (sim *Simulator) CollectSnapshot(snapshotId int) *SnapshotState {
-	// TODO: IMPLEMENT ME
 	snap := SnapshotState{snapshotId, make(map[string]int), make([]*SnapshotMessage, 0)}
+	// TODO: IMPLEMENT ME
 	return &snap
 }

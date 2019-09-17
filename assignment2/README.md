@@ -38,7 +38,7 @@
 <p>
   Of these files, you only need to turn in <tt>server.go</tt> and <tt>simulator.go</tt>. However, some other
   files also contain information that will be useful for your implementation or debugging, such as the <tt>debug</tt>
-  flag in <tt>common.go</tt> and the thread-safe map in <tt>syncmap.go</tt>. Your task is to implement the functions
+  flag in <tt>common.go</tt> and the thread-safe map in <tt>syncmap.go</tt>. However, you do not have to use the provided SyncMap if you would prefer to implement its functionality yourself. Your task is to implement the functions
   that say <tt>TODO: IMPLEMENT ME</tt>, adding fields to the surrounding classes if necessary.
 </p>
 

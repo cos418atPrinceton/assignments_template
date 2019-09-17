@@ -50,8 +50,17 @@
   ok      /path/to/assignment1-1   0.009s
 </pre>
 
+### Point Distribution
 
-
+<table>
+<tr><th>Test</th><th>Points</th></tr>
+<tr><td>Q1Simple</td><td>4</td></tr>
+<tr><td>Q1DeclarationOfIndependence</td><td>4</td></tr>
+<tr><td>Q2_1</td><td>3</td></tr>
+<tr><td>Q2_2</td><td>3</td></tr>
+<tr><td>Q2_3</td><td>3</td></tr>
+<tr><td>Q2_4</td><td>3</td></tr>
+</table>
 
 ### Submitting Assignment
 <p> Now you need to submit your assignment. Commit your change and push it to the remote repository by doing the following: </p>

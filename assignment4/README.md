@@ -178,6 +178,27 @@
   discard old log entries, but you <strong>do not</strong> have
   to worry about garbage collecting the log in this lab.</li>
 
+## Point Distribution
+
+<table>
+<tr><th>Test</th><th>Points</th></tr>
+<tr><td>BasicAgree</td><td>6</td></tr>
+<tr><td>FailAgree</td><td>6</td></tr>
+<tr><td>FailNoAgree</td><td>6</td></tr>
+<tr><td>ConcurrentStarts</td><td>6</td></tr>
+<tr><td>Rejoin</td><td>6</td></tr>
+<tr><td>Backup</td><td>7</td></tr>
+<tr><td>Count</td><td>7</td></tr>
+<tr><td>Persist1</td><td>7</td></tr>
+<tr><td>Persist2</td><td>7</td></tr>
+<tr><td>Persist3</td><td>7</td></tr>
+<tr><td>Figure8$</td><td>7</td></tr>
+<tr><td>UnreliableAgree</td><td>7</td></tr>
+<tr><td>Figure8Unreliable</td><td>7</td></tr>
+<tr><td>ReliableChurn</td><td>7</td></tr>
+<tr><td>UnreliableChurn</td><td>7</td></tr>
+</table>
+
 ## Submitting Assignment
 
 You hand in your assignment as before.

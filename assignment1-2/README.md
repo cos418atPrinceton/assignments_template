@@ -287,8 +287,8 @@ You can remove the output file and all intermediate files with:
 
 <table>
 <tr><th>Test</th><th>Points</th></tr>
-<tr><td>SequentialSingle</td><td>5</td></tr>
-<tr><td>SequentialMany</td><td>5</td></tr>
+<tr><td>SequentialSingle</td><td>10</td></tr>
+<tr><td>SequentialMany</td><td>10</td></tr>
 <tr><td>test-wc.sh</td><td>10</td></tr>
 </table>
 

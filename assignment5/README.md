@@ -310,6 +310,24 @@ ok  kvraft 214.069s</pre>
 </p>
 
 
+## Point Distribution
+
+<table>
+<tr><th>Test</th><th>Points</th></tr>
+<tr><td>TestBasic$</td><td>8</td></tr>
+<tr><td>TestConcurrent$</td><td>8</td></tr>
+<tr><td>TestUnreliable$</td><td>8</td></tr>
+<tr><td>TestUnreliableOneKey$</td><td>8</td></tr>
+<tr><td>TestOnePartition$</td><td>8</td></tr>
+<tr><td>TestManyPartitionsOneClient$</td><td>8</td></tr>
+<tr><td>TestManyPartitionsManyClients$</td><td>8</td></tr>
+<tr><td>TestPersistOneClient$</td><td>8</td></tr>
+<tr><td>TestPersistConcurrent$</td><td>9</td></tr>
+<tr><td>TestPersistConcurrentUnreliable$</td><td>9</td></tr>
+<tr><td>TestPersistPartition$</td><td>9</td></tr>
+<tr><td>TestPersistPartitionUnreliable$</td><td>9</td></tr>
+</table>
+
 ## Submitting Assignment
 
 You hand in your assignment as before.

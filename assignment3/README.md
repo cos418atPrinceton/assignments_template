@@ -208,6 +208,14 @@ PASS
   </li>
 </ul>
 
+## Point Distribution
+
+<table>
+<tr><th>Test</th><th>Points</th></tr>
+<tr><td>InitialElection</td><td>50</td></tr>
+<tr><td>ReElection</td><td>50</td></tr>
+</table>
+
 ## Submitting Assignment
 
 You hand in your assignment as before.

@@ -72,6 +72,19 @@
   ok      chandy-lamport  0.006s
 </pre>
 
+## Point Distribution
+
+<table>
+<tr><th>Test</th><th>Points</th></tr>
+<tr><td>2NodesSimple</td><td>13</td></tr>
+<tr><td>2NodesSingleMessage</td><td>13</td></tr>
+<tr><td>3NodesMultipleMessages</td><td>14</td></tr>
+<tr><td>3NodesMultipleBidirectionalMessages</td><td>14</td></tr>
+<tr><td>8NodesSequentialSnapshots</td><td>15</td></tr>
+<tr><td>8NodesConcurrentSnapshots</td><td>15</td></tr>
+<tr><td>10Nodes</td><td>16</td></tr>
+</table>
+
 ## Submitting Assignment
 
 You hand in your assignment as before.

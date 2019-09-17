@@ -322,6 +322,15 @@ yours: 15 pg-being_ernest.txt,pg-dorian_gray.txt,pg-dracula.txt,pg-emma.txt,pg-f
   </li>
 </ul>
 
+<h2>Point Distribution</h2>
+<table>
+<tr><th>Test</th><th>Points</th></tr>
+<tr><td>TestBasic</td><td>15</td></tr>
+<tr><td>OneFailure</td><td>10</td></tr>
+<tr><td>ManyFailure</td><td>10</td></tr>
+<tr><td>test-ii.sh</td><td>15</td></tr>
+</table>
+
 <h2>Submission</h2>
 
 You hand in your assignment as before.

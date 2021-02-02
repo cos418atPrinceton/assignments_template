@@ -55,6 +55,7 @@
   For this assignment, we will focus primarily on the code and tests for the Raft implementation in
   <tt>src/raft</tt> and the simple RPC-like system in <tt>src/labrpc</tt>. It is worth your while to
   read and digest the code in these packages.
+  Note that if using gob.encode, <a href="https://github.com/golang/go/issues/21929">encode zero</a> will get the previous value. It’s a feature not a bug.
 </p>
 
 <p>

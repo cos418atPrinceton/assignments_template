@@ -6,6 +6,6 @@ then
 echo "Failed test. Output should be as in mr-challenge.txt. Your output differs as follows (from diff.out):" > /dev/stderr
   cat diff.out
 else
-  echo "Passed test" > /dev/stderr
+  echo "PASSED test" > /dev/stdout
 fi
 

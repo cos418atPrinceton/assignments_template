@@ -2,7 +2,7 @@
 
 ### Environment Setup
 
-Teaching support is only provided for work done using the cycles or courselab servers. The tests are known to work under Go 1.9. Thus later version 1 releases should also work. Learn more about semantic versioning [here](https://semver.org/). Please follow <a href="setup.md">these instructions</a> for requesting access to the servers if you have not already done so.
+Teaching support is only provided for work done using the cycles or courselab servers. The tests are known to work under Go 1.13. Thus later version 1 releases should also work. Learn more about semantic versioning [here](https://semver.org/). Please follow <a href="setup.md">these instructions</a> for requesting access to the servers if you have not already done so.
 
 ### Tools
 <p>
@@ -47,7 +47,7 @@ href="https://github.com/golang/lint">Golint</a> where possible. </p>
 </ul>
 </p>
 
-<p> All programming assignments, require Git for submission. <p> We are using Github for distributing and collecting your assignments. At the time of seeing this, you should have already joined the <a href="https://github.com/orgs/COS418F19">COS418F19</a> organization on Github and forked your private repository. Your Github page should have a link. Normally, you only need to clone the repository once, and you will have everything you need for all the assignments in this class.
+<p> All programming assignments, require Git for submission. <p> We are using Github for distributing and collecting your assignments. At the time of seeing this, you should have already joined the <a href="https://github.com/orgs/cos418atPrinceton">cos418atPrinceton</a> organization on Github and forked your private repository. Your Github page should have a link. Normally, you only need to clone the repository once, and you will have everything you need for all the assignments in this class.
 
 ```bash
 $ git clone https://github.com/COS418F19/assignments-myusername.git 418

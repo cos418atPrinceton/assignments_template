@@ -186,7 +186,9 @@ ok  mapreduce4.635s
   Now that the map and reduce tasks are connected, we can start
   implementing some interesting Map/Reduce operations. For this
   assignment, we will be implementing word count &mdash; a simple and
-  classic Map/Reduce example. Specifically, your task is to
+  classic Map/Reduce example. As opposed to assignment 1-1, you should 
+  not consider words with different cases as the same words. 
+  Specifically, your task is to
   modify <tt>mapF</tt> and <tt>reduceF</tt> within <tt>main/wc.go</tt>
   so that the application reports the number of occurrences of each word.
   A word is any contiguous sequence of letters, as

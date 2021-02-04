@@ -35,26 +35,17 @@
   We have supplied you with skeleton code and tests under this directory. You will need to modify
   <tt>kvraft/client.go</tt>, <tt>kvraft/server.go</tt>, and perhaps <tt>kvraft/common.go</tt>. 
   (Even if you don't modify <tt>common.go</tt>, you should submit it as-provided.) For this assignment
-  we give you the option to either use your own implementation of Raft from HW4 or use our solution,
-  which we recommend. Our solution will be provided to you as a binary that
-  you will import in your project.
+  you should use your own implementation of Raft from HW4.  
 </p>
 
 <p>
-  To get up and running, execute the following commands, as in the previous assignments, and change into the <tt>src/kvraft</tt> directory:
+  To get up and running, copy raft.go file from assignment4 to the assignment5\src\raft folder, then execute the following commands, as in the previous assignments, and change into the <tt>src/kvraft</tt> directory:
   <pre>
   # Go needs $GOPATH to be set to the directory containing "src"
   $ cd 418/assignment5
   $ export GOPATH="$PWD"
   $ cd "$GOPATH/src/kvraft"
-  </pre>
-  To apply the binary, follow these instructions:
-  <pre>
-  $ tar -vzxf raft-binary*.tgz
-  $ rm raft-binary*.tgz
-  $ mv raft.go src/raft/raft.go
-  $ cd src/kvraft
-  $ go test # this should now print "Creating RAFT instance from binary"
+  $ go test
   </pre>
 </p>
 

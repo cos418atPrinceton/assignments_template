@@ -141,17 +141,11 @@ f[nIn-1]-0, ..., f[nIn-1]-[nReduce-1].
   with a Go test suite that checks the correctness of your
   implementation. These tests are implemented in the file
   <tt>test_test.go</tt>. To run the tests for the sequential
-  implementation that you have now fixed, follow this (or a non-<tt>bash</tt> equivalent) sequence of shell commands,
-  starting from the <tt>418/assignment1-2</tt> directory:
+  implementation that you have now fixed, follow this (or a non-<tt>bash</tt> equivalent) sequence of shell commands:
 
 <pre>
-$ cd 418/assignment1-2
-$ ls
-README.md src
-# Go needs $GOPATH to be set to the directory containing "src"
-$ export GOPATH="$PWD"
-$ cd src
-$ go test -run Sequential mapreduce/...
+$ cd 418labsf22-*/assignment1-2/src
+$ go test -run Sequential src/mapreduce/...
 ok  mapreduce 4.515s
 </pre>
 
@@ -201,10 +195,10 @@ ok  mapreduce4.635s
   the <tt>main</tt> directory, downloaded from <a
                                        href="https://www.gutenberg.org/ebooks/search/%3Fsort_order%3Ddownloads">Project
     Gutenberg</a>.
-  Remember to set <tt>GOPATH</tt> before continuing. This is the result when you initially try to compile the code we provide you
+  This is the result when you initially try to compile the code we provide you
   and run it:
 <pre>
-$ cd "$GOPATH/src/main"
+$ cd assignment1-2/src/main
 $ go run wc.go master sequential pg-*.txt
 # command-line-arguments
 ./wc.go:14: missing return at end of function
@@ -231,7 +225,7 @@ $ go run wc.go master sequential pg-*.txt
 <p>
   You can test your solution using:
 <pre>
-$ cd "$GOPATH/src/main"
+$ cd assignment1-2/src/main
 $ go run wc.go master sequential pg-*.txt
 master: Starting Map/Reduce task wcseq
 Merge: read mrtmp.wcseq-res-0
@@ -263,7 +257,7 @@ You can remove the output file and all intermediate files with:
 </p>
 
 <p>
-  To make testing easy for you, from the <tt>$GOPATH/src/main</tt> directory, run:
+  To make testing easy for you, from the <tt>assignment1-2/src/main</tt> directory, run:
   <pre>$ sh ./test-wc.sh</pre>
   and it will report if your solution is correct or not.
 </p>

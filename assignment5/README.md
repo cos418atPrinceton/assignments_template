@@ -41,10 +41,6 @@
 <p>
   To get up and running, copy raft.go file from assignment4 to the assignment5\src\raft folder, then execute the following commands, as in the previous assignments, and change into the <tt>src/kvraft</tt> directory:
   <pre>
-  # Go needs $GOPATH to be set to the directory containing "src"
-  $ cd 418/assignment5
-  $ export GOPATH="$PWD"
-  $ cd "$GOPATH/src/kvraft"
   $ go test
   </pre>
 </p>

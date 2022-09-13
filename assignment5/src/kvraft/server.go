@@ -2,9 +2,9 @@ package raftkv
 
 import (
 	"encoding/gob"
-	"labrpc"
 	"log"
-	"raft"
+	"src/labrpc"
+	"src/raft"
 	"sync"
 )
 
@@ -16,7 +16,6 @@ func DPrintf(format string, a ...interface{}) (n int, err error) {
 	}
 	return
 }
-
 
 type Op struct {
 	// Your definitions here.
@@ -34,7 +33,6 @@ type RaftKV struct {
 
 	// Your definitions here.
 }
-
 
 func (kv *RaftKV) Get(args *GetArgs, reply *GetReply) {
 	// Your code here.
@@ -81,7 +79,6 @@ func StartKVServer(servers []*labrpc.ClientEnd, me int, persister *raft.Persiste
 
 	kv.applyCh = make(chan raft.ApplyMsg)
 	kv.rf = raft.Make(servers, me, persister, kv.applyCh)
-
 
 	return kv
 }

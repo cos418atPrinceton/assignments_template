@@ -34,11 +34,12 @@
 To get started, copy all source files from `assignment1-2/src` to `assignment1-3/src` as follows.
 
 <pre>
-# start from your 418 GitHub repo
-$ cd 418
+# start from your 418labsf22 GitHub repo
+$ cd 418labsf22-*
 $ ls
 README.md     assignment1-1 assignment1-2 assignment1-3 assignment2   assignment3   assignment4   assignment5   setup.md
-$ cp -r assignment1-2/src/* assignment1-3/src/
+$ cp -r assignment1-2/src/main assignment1-3/src/
+$ cp -r assignment1-2/src/mapreduce assignment1-3/src/
 $ ls assignment1-3/src
 main      mapreduce
 </pre>
@@ -122,14 +123,14 @@ main      mapreduce
   you did in Part A of assignment 1-2, except swapping out <tt>-run Sequential</tt>
   with <tt>-run TestBasic</tt>. This will execute the distributed
   test case without worker failures instead of the sequential
-  ones we were running before. Remember to set your <tt>GOPATH</tt> first.
-  <pre>$ go test -run TestBasic mapreduce/...</pre>
+  ones we were running before.
+  <pre>$ go test -run TestBasic src/mapreduce/...</pre>
   As before, you can get more verbose output for debugging if you
   set <tt>debugEnabled = true</tt> in <tt>mapreduce/common.go</tt>, and add
   <tt>-v</tt> to the test command above. You will get much more
   output along the lines of:
 <pre>
-$ go test -v -run TestBasic mapreduce/...
+$ go test -v -run TestBasic src/mapreduce/...
 === RUN   TestBasic
 /var/tmp/824-32311/mr8665-master: Starting Map/Reduce task test
 Schedule: 100 Map tasks (50 I/Os)
@@ -205,8 +206,8 @@ ok  mapreduce25.613s</pre>
   failures of workers. Periodically, the test cases start new
   workers that the master can use to make forward progress, but
   these workers fail after handling a few tasks. Run these
-  tests as follows. Remember to set your <tt>GOPATH</tt> first.
-  <pre>$ go test -run Failure mapreduce/...</pre>
+  tests as follows.
+  <pre>$ go test -run Failure src/mapreduce/...</pre>
 </p>
 
 
@@ -238,7 +239,7 @@ ok  mapreduce25.613s</pre>
   <tt>reduceF</tt> in <tt>main/ii.go</tt> so that they
   together produce an inverted index. Running
   <tt>ii.go</tt> should output a list of tuples, one per
-  line, in the following format. Remember to set your <tt>GOPATH</tt> first.
+  line, in the following format.
 <pre>
 $ go run ii.go master sequential pg-*.txt
 $ head -n5 mrtmp.iiseq
@@ -270,7 +271,7 @@ yours: 15 pg-being_ernest.txt,pg-dorian_gray.txt,pg-dracula.txt,pg-emma.txt,pg-f
 </p>
 
 <p>
-  To make testing easy for you, from the <tt>$GOPATH/src/main</tt> directory, run:
+  To make testing easy for you, from the <tt>assignment1-3/src/main</tt> directory, run:
   <pre>$ sh ./test-ii.sh</pre>
   and it will report if your solution is correct or not.
 </p>

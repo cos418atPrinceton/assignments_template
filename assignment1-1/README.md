@@ -71,6 +71,8 @@ $ git tag -a -m "i finished assignment 1-1" a11-handin
 $ git push origin master
 $ git push origin a11-handin
 ```
+<b>Note</b>: Please do not submit to the tag `all-handin` instead of `a11-handin`.
+
 <p>Please fill in <a href="https://forms.gle/BMUQWbccnTJ4HU8u8">this google form</a> with your GitHub username and your Princeton NetID. This allows us to map your GitHub to your Princeton information for grading. We'll run the grading scripts daily and send your grading information to your Princeton email.</p>
 
 <p>In order to overwrite a tag use the force flag as follows.</p>

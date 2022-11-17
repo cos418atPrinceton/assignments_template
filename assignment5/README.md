@@ -35,7 +35,8 @@
   We have supplied you with skeleton code and tests under this directory. You will need to modify
   <tt>kvraft/client.go</tt>, <tt>kvraft/server.go</tt>, and perhaps <tt>kvraft/common.go</tt>. 
   (Even if you don't modify <tt>common.go</tt>, you should submit it as-provided.) For this assignment
-  you should use your own implementation of Raft from HW4.  
+  you should use your own implementation of Raft from HW4, although we will grade your submission with
+  our solution implementation of `raft.go`.
 </p>
 
 <p>
@@ -44,6 +45,23 @@
   $ go test
   </pre>
 </p>
+
+<p>
+For your local testing, there are two option available:
+
+Option 1: You can use your own raft implementation (raft.go) from assignment 4 to 5. (You may skip to `Part I` below if you choose this option.)
+
+Option 2: You can use the raft.a binary provided by us. To do so, you must downgrade your GO to version 1.12.17, which you may do by removing the current installation and reinstalling the older version.
+
+In order to run your code in these earlier versions of go, you have to make some slight changes to your `assignment5` directory before running the tests locally (or on courselab). We provide the `prepare_local_run_a5.sh` bash script to do so automatically. However, in order to maintain compatibility with the grader, you must undo those changes before submitting or **else you will get an grading report marked with zero credit**. To do so, we provide the `prepare_submission_a5.sh` bash script. Both scripts are in the directory `assignment5/src/kvraft/`.
+
+To emphasize this usage pattern: before running tests locally (or on courselab), you must run the `prepare_local_run_a5.sh` bash script; before submitting to the autograder, you must run the `prepare_submission_a5.sh` bash script. The next time you want to run tests locally, you must rerun the `prepare_local_run_a5.sh` bash script.
+
+The `prepare_local_run_a5.sh` bash script will overwrite the `raft.go` file in `assignment5/src/raft` to do something required to use the raft binary, so do not panic.
+
+(You may run a bash script named `file.sh` by running `sh file.sh` or `bash file.sh` depending on your system.)
+</p>
+
 
 <h2>Part I</h2>
 <p>

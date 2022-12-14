@@ -7,7 +7,7 @@ cat > ../raft/raft.go <<- EOM
 package raft
 EOM
 
-unset GOPATH
+# unset GOPATH
 cd ../
 go mod init src
 go mod edit -go=1.17

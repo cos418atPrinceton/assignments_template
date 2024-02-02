@@ -47,11 +47,10 @@ href="https://github.com/golang/lint">Golint</a> where possible. </p>
 </ul>
 </p>
 
-<p> All programming assignments, require Git for submission. <p> We are using Github for distributing and collecting your assignments. At the time of seeing this, you should have already joined the <a href="https://github.com/orgs/cos418atPrinceton">cos418atPrinceton</a> organization on Github and forked your private repository. Your Github page should have a link. Normally, you only need to clone the repository once, and you will have everything you need for all the assignments in this class.
+<p> All programming assignments, require Git for submission. <p> We are using Github for distributing and collecting your assignments. At the time of seeing this, you should have already joined the cos418 github classroom---which will automatically fork your private repository. Your Github page should have a link. Normally, you only need to clone the repository once, and you will have everything you need for all the assignments in this class.
 
 ```bash
-$ git clone https://github.com/cos418atPrinceton/418labsf22-myusername.git 418
-$ cd 418
+$ git clone https://github.com/cos418s24/assignments-template-YourNameHere
 $ ls
 assignment1-1  assignment1-2  assignment1-3  assignment2  assignment3  assignment4  assignment5  README.md  setup.md
 $ 
